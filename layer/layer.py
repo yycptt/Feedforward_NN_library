@@ -9,7 +9,7 @@ class Layer(object):
         pass
 
     @abc.abstractmethod
-    def forward(self, X):
+    def forward(self, X, train=True):
         pass
 
     @abc.abstractmethod
@@ -25,5 +25,9 @@ class Layer(object):
         pass
 
     @abc.abstractmethod
-    def setparams(self, params):
+    def updateparams(self, params):
+        pass
+
+    @abc.abstractmethod
+    def get_l2_loss(self):
         pass
